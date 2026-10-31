@@ -38,7 +38,8 @@
       const name=nameInput.value.trim(),age=Number(ageInput.value);
       if(!name){error.textContent='Please enter your name first.';nameInput.focus();return}
       if(!Number.isInteger(age)||age<1||age>99){error.textContent='Enter an age between 1 and 99.';ageInput.focus();return}
-      window.location.href=`prediction.html?${new URLSearchParams({name,age:String(age)})}`;
+      sessionStorage.setItem('future-predictor-input',JSON.stringify({name,age}));
+      window.location.href='prediction.html';
     });
   </script>
 </body>
