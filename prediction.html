@@ -26,9 +26,10 @@
   </div>
   <script src="predictions.js"></script>
   <script>
-    const params=new URLSearchParams(location.search);
-    const name=(params.get('name')||'Friend').trim().slice(0,32)||'Friend';
-    const age=Number(params.get('age'));
+    let saved={};
+    try{saved=JSON.parse(sessionStorage.getItem('future-predictor-input')||'{}')}catch{}
+    const name=(typeof saved.name==='string'?saved.name:'Friend').trim().slice(0,32)||'Friend';
+    const age=Number(saved.age);
     document.querySelector('#person-name').textContent=name.endsWith('s')?`${name}'`: `${name}'s`;
     const validAge=Number.isInteger(age)&&age>=1&&age<=99?age:24;
     const categories=Object.keys(pools);
