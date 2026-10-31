@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b0b12">
+  <meta name="description" content="Spin five little reels and see your playful future forecast."><title>Your Forecast — Future Predictor</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+    :root{color-scheme:dark;--bg:#0b0b12;--ink:#f5f3ff;--muted:#9695a7;--line:#ffffff14;--violet:#b7a1ff;--mint:#90f4d0}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -15%,#7048bf45,transparent 50%),#0b0b12;color:var(--ink);font:15px/1.5 'DM Sans',sans-serif}.wrap{width:min(1000px,calc(100% - 38px));margin:auto}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff0d}.brand{display:flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none;font:600 15px 'Space Grotesk',sans-serif}.mark{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;color:#171222;background:linear-gradient(145deg,#c4b5fd,#8b5cf6)}.back{color:#aaa8ba;text-decoration:none;font-size:12px}.back:hover{color:#fff}.intro{text-align:center;padding:40px 0 23px}.kicker{color:#c4b5fd;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}.intro h1{font:600 clamp(31px,5vw,47px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-1.7px;margin:10px 0 6px}.intro h1 span{color:#c4b5fd}.intro p{margin:0;color:var(--muted);font-size:13px}.intro b{color:#eeebf7;font-weight:600}.machine{border:1px solid #ffffff15;border-radius:22px;background:linear-gradient(145deg,#171622f5,#101019f7);padding:21px;box-shadow:0 22px 90px #0005}.machine-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.machine-top h2{font:600 14px 'Space Grotesk',sans-serif;margin:0}.status{color:#898697;font-size:9px;letter-spacing:1.1px;text-transform:uppercase;display:flex;align-items:center;gap:7px}.status:before{content:'';width:6px;height:6px;border-radius:50%;background:#666272}.machine[data-state="spinning"] .status{color:#d2c4ff}.machine[data-state="spinning"] .status:before{background:#c4b5fd;box-shadow:0 0 10px #c4b5fd;animation:pulse .4s infinite alternate}.machine[data-state="ready"] .status{color:var(--mint)}.machine[data-state="ready"] .status:before{background:var(--mint);box-shadow:0 0 10px var(--mint)}.reels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.reel-card{min-width:0;border:1px solid #ffffff10;border-radius:14px;background:linear-gradient(155deg,#ffffff08,#ffffff02);padding:12px 11px 13px;overflow:hidden}.reel-label{display:flex;align-items:center;gap:7px;color:#b4b0c2;font-size:9px;text-transform:uppercase;font-weight:700;letter-spacing:.8px;margin-bottom:10px}.reel-icon{color:#d1c2ff;font-size:13px}.slot-window{height:75px;overflow:hidden;position:relative;border:1px solid #c4b5fd20;border-radius:10px;background:linear-gradient(120deg,#a78bfa0b,#f0abfc08),#0d0d15;box-shadow:inset 0 0 17px #0007}.slot-window:before,.slot-window:after{content:'';position:absolute;left:0;right:0;height:18px;z-index:2;pointer-events:none}.slot-window:before{top:0;background:linear-gradient(#0d0d15,transparent)}.slot-window:after{bottom:0;background:linear-gradient(transparent,#0d0d15)}.slot-strip{will-change:transform}.slot-word{height:75px;display:flex;align-items:center;justify-content:center;padding:8px;text-align:center;font:600 12px/1.25 'Space Grotesk',sans-serif;color:#f1edfb}.reel-card.spinning .slot-word{filter:blur(.65px)}.reel-card.stopped .slot-window{border-color:#c4b5fd75;box-shadow:0 0 18px #a78bfa1c,inset 0 0 16px #0007}.under-reels{text-align:center;color:#797688;font-size:10px;margin:12px 0 0}.forecast{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:13px}.forecast-card{opacity:0;transform:translateY(8px);border:1px solid #ffffff0e;border-radius:12px;padding:13px 14px;background:#ffffff04;transition:opacity .45s ease,transform .45s cubic-bezier(.18,.85,.25,1.1)}.forecast-card.show{opacity:1;transform:translateY(0)}.forecast-card:last-child{grid-column:1/-1}.forecast-heading{color:#a6a2b3;font-size:9px;text-transform:uppercase;letter-spacing:1px;font-weight:700}.forecast-title{color:#f2eff9;font-weight:600;font-size:12px;margin:5px 0 2px}.forecast-copy{color:#9b99a9;font-size:11px;line-height:1.45}.forecast-time{color:#c2b2ff;font-size:10px;margin-top:7px}.actions{display:flex;justify-content:center;gap:9px;margin:17px 0 3px}.button{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:10px 15px;border:1px solid #ffffff1a;border-radius:10px;color:#d8d4e3;background:#ffffff06;text-decoration:none;font:600 11px 'DM Sans',sans-serif;cursor:pointer;transition:background .2s,border-color .2s}.button:hover{background:#ffffff0c;border-color:#ffffff35}.button.primary{border:0;color:#171222;background:linear-gradient(100deg,#c4b5fd,#e9a7f0 60%,#f3b8d8);box-shadow:0 5px 20px #b18bf12b}.button:disabled{opacity:.55;cursor:wait}.footer{text-align:center;color:#696778;font-size:10px;margin:17px 0 34px}.footer span{color:#b8a4f5}@keyframes pulse{to{opacity:.35;transform:scale(.75)}}@media(max-width:720px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}.reel-card:last-child{grid-column:1/-1}.reel-card:last-child .slot-word{max-width:260px;margin:auto}.machine{padding:15px}.intro{padding-top:31px}.forecast{gap:8px}}@media(max-width:420px){.wrap{width:calc(100% - 24px)}.nav{height:62px}.machine{padding:11px}.reels{gap:7px}.reel-card{padding:10px 8px}.slot-window,.slot-word{height:70px}.slot-word{font-size:11px}.forecast-card{padding:11px}.intro h1{letter-spacing:-1px}.intro p{font-size:12px}.actions{flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">✳</span> future predictor</a><a class="back" href="index.html">← New reading</a></header>
+    <main>
+      <section class="intro"><div class="kicker">Your cosmic forecast</div><h1><span id="person-name">Your</span> next chapter</h1><p>Born from a little curiosity. Take it as a playful possibility, <b>not a prophecy.</b></p></section>
+      <section class="machine" id="machine" data-state="spinning" aria-live="polite">
+        <div class="machine-top"><h2>✦ &nbsp;THE FUTURE MACHINE</h2><div class="status" id="status">SPINNING THE REELS</div></div>
+        <div class="reels" id="reels"></div>
+        <p class="under-reels" id="machine-note">The universe is shuffling your possibilities…</p>
+      </section>
+      <section class="forecast" id="forecast" aria-label="Your detailed predictions"></section>
+      <div class="actions"><button class="button primary" id="spin-again" type="button">Spin again &nbsp;↻</button><a class="button" href="index.html">← &nbsp;Change name or age</a></div>
+    </main>
+    <p class="footer">Just for fun — your future is still yours to shape. <span>✦</span></p>
+  </div>
+  <script src="predictions.js"></script>
+  <script>
+    const params=new URLSearchParams(location.search);
+    const name=(params.get('name')||'Friend').trim().slice(0,32)||'Friend';
+    const age=Number(params.get('age'));
+    document.querySelector('#person-name').textContent=name.endsWith('s')?`${name}'`: `${name}'s`;
+    const validAge=Number.isInteger(age)&&age>=1&&age<=99?age:24;
+    const categories=Object.keys(pools);
+    const icons={career:'✳',love:'♡',events:'✦',achievement:'✧',money:'◈'};
+    const labels={career:'Career',love:'Love',events:'Life events',achievement:'Achievement',money:'Money'};
+    const reels=document.querySelector('#reels'),forecast=document.querySelector('#forecast'),machine=document.querySelector('#machine'),status=document.querySelector('#status'),note=document.querySelector('#machine-note'),again=document.querySelector('#spin-again');
+    let timers=[];
+    function buildReels(finalForecast){
+      reels.innerHTML='';
+      finalForecast.forEach((item,index)=>{
+        const card=document.createElement('article');card.className='reel-card spinning';card.dataset.index=index;
+        const words=Array.from({length:18},()=>random(pools[item.key])[0]);words.push(item.title);
+        card.innerHTML=`<div class="reel-label"><span class="reel-icon">${icons[item.key]}</span>${labels[item.key]}</div><div class="slot-window"><div class="slot-strip">${words.map(word=>`<div class="slot-word"></div>`).join('')}</div></div>`;
+        card.querySelectorAll('.slot-word').forEach((node,i)=>node.textContent=words[i]);
+        reels.append(card);
+      });
+    }
+    function renderForecast(items){
+      forecast.innerHTML=items.map((item,index)=>`<article class="forecast-card" style="transition-delay:${index*100}ms"><div class="forecast-heading">${icons[item.key]} &nbsp;${labels[item.key]}</div><div class="forecast-title">${item.title}</div><div class="forecast-copy">${item.copy}</div><div class="forecast-time">◷ &nbsp;${item.when}</div></article>`).join('');
+      requestAnimationFrame(()=>forecast.querySelectorAll('.forecast-card').forEach(card=>card.classList.add('show')));
+    }
+    function spin(){
+      timers.forEach(clearTimeout);timers=[];again.disabled=true;forecast.innerHTML='';note.textContent='The universe is shuffling your possibilities…';status.textContent='SPINNING THE REELS';machine.dataset.state='spinning';
+      const results=makeForecast(validAge);buildReels(results);
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{
+        const cards=[...reels.querySelectorAll('.reel-card')];
+        cards.forEach((card,index)=>{
+          const strip=card.querySelector('.slot-strip'),row=strip.querySelector('.slot-word'),height=row.getBoundingClientRect().height;
+          strip.style.transition=`transform ${2.1+index*.28}s cubic-bezier(.12,.72,.12,1) ${index*.32}s`;
+          timers.push(setTimeout(()=>{strip.style.transform=`translateY(-${height*18}px)`},60));
+          timers.push(setTimeout(()=>{card.classList.remove('spinning');card.classList.add('stopped')},60+(2.1+index*.28)*1000+index*320));
+        });
+      }));
+      timers.push(setTimeout(()=>{
+        machine.dataset.state='ready';status.textContent='YOUR FORECAST IS IN';note.textContent='Five possibilities. Your story is still yours to write.';renderForecast(results);again.disabled=false;
+      },60+2.1*1000+4*.32*1000+4*.28*1000+400));
+    }
+    again.addEventListener('click',spin);
+    spin();
+  </script>
+</body>
+</html>
